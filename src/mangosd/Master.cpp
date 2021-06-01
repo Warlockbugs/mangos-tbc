@@ -405,7 +405,7 @@ bool Master::_StartDB()
         return false;
     }
 
-    if (!LoginDatabase.CheckRequiredField("realmd_db_version", REVISION_DB_REALMD))
+    if (!LoginDatabase.CheckRequiredField("authserver_db_version", REVISION_DB_AUTHSERVER))
     {
         ///- Wait for already started DB delay threads to end
         WorldDatabase.HaltDelayThread();

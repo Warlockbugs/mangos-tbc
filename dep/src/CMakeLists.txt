@@ -24,10 +24,10 @@ if (NOT ZLIB_FOUND)
   add_subdirectory(zlib)
 endif()
 
-if (BUILD_GAME_SERVER OR BUILD_LOGIN_SERVER)
+if (BUILD_GAME_SERVER)
   add_subdirectory(gsoap)
 endif()
 
-if (BUILD_GAME_SERVER OR BUILD_LOGIN_SERVER OR BUILD_EXTRACTORS)
+if (BUILD_GAME_SERVER OR BUILD_EXTRACTORS)
   add_subdirectory(utf8cpp)
 endif()

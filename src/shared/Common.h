@@ -125,7 +125,7 @@ enum AccountTypes : uint32
     SEC_CONSOLE        = 4                                  // must be always last in list, accounts must have less security level always also
 };
 
-// Used in mangosd/realmd
+// Used in mangosd/authserver
 enum RealmFlags
 {
     REALM_FLAG_NONE         = 0x00,

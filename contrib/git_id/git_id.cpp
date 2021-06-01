@@ -51,7 +51,7 @@
 // config
 
 #define NUM_REMOTES 4
-#define NUM_DATABASES 3
+#define NUM_DATABASES 2
 
 char remotes[NUM_REMOTES][MAX_REMOTE] =
 {
@@ -68,28 +68,24 @@ char new_index_file[MAX_PATH] = ".git/git_id_index";
 
 char databases[NUM_DATABASES][MAX_DB] =
 {
-    "realmd",
     "characters",
     "mangos",
 };
 
 char db_version_table[NUM_DATABASES][MAX_DB] =
 {
-    "realmd_db_version",
     "character_db_version",
     "db_version",
 };
 
 char db_sql_file[NUM_DATABASES][MAX_PATH] =
 {
-    "sql/base/realmd.sql",
     "sql/base/characters.sql",
     "sql/base/mangos.sql",
 };
 
 char db_sql_rev_field[NUM_DATABASES][MAX_PATH] =
 {
-    "REVISION_DB_REALMD",
     "REVISION_DB_CHARACTERS",
     "REVISION_DB_MANGOS",
 };
@@ -97,7 +93,6 @@ char db_sql_rev_field[NUM_DATABASES][MAX_PATH] =
 // last milestone's file information
 char last_sql_update[NUM_DATABASES][MAX_PATH] =
 {
-    "s2325_01_realmd",
     "s2325_02_characters",
     "s2326_01_mangos_mangos_string",
 };
@@ -105,13 +100,11 @@ char last_sql_update[NUM_DATABASES][MAX_PATH] =
 int last_sql_rev[NUM_DATABASES] =
 {
     2325,
-    2325,
     2326
 };
 
 int last_sql_nr[NUM_DATABASES] =
 {
-    1,
     2,
     1
 };

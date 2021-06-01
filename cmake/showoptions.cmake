@@ -37,12 +37,6 @@ else()
   message(STATUS "Build game server     : No")
 endif()
 
-if(BUILD_LOGIN_SERVER)
-  message(STATUS "Build login server    : Yes (default)")
-else()
-  message(STATUS "Build login server    : No")
-endif()
-
 if(BUILD_SCRIPTDEV)
   message(STATUS "Build ScriptDev       : Yes (default)")
 else()

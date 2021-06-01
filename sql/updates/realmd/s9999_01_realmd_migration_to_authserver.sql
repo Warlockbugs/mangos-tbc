@@ -1,0 +1,2 @@
+ALTER TABLE realmd_db_version CHANGE COLUMN required_s2421_01_realmd_account_locale_agnostic required_a0001_01_authserver bit;
+ALTER TABLE realmd_db_version RENAME authserver_db_version;

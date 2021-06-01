@@ -191,7 +191,7 @@ int main(int argc, char* argv[])
     BarGoLink::SetOutputState(sConfig.GetBoolDefault("ShowProgressBars", true));
 
     ///- and run the 'Master'
-    /// \todo Why do we need this 'Master'? Can't all of this be in the Main as for Realmd?
+    /// \todo Why do we need this 'Master'? Can't all of this be in the Main as for AuthServer?
     return sMaster.Run();
 
     // at sMaster return function exist with codes

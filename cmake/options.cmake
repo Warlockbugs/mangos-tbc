@@ -3,7 +3,6 @@ option(WARNINGS             "Show all warnings during compile"      OFF)
 option(POSTGRESQL           "Use PostgreSQL"                        OFF)
 option(PCH                  "Use precompiled headers"               ON)
 option(BUILD_GAME_SERVER    "Build game server"                     ON)
-option(BUILD_LOGIN_SERVER   "Build login server"                    ON)
 option(BUILD_EXTRACTORS     "Build map/dbc/vmap/mmap extractors"    OFF)
 option(BUILD_SCRIPTDEV      "Build ScriptDev. (OFF Speedup build)"  ON)
 option(BUILD_PLAYERBOT      "Build Playerbot mod"                   OFF)
@@ -29,7 +28,6 @@ message(STATUS
     WARNINGS                Show all warnings during compile
     POSTGRESQL              Use PostgreSQL instead of mysql
     BUILD_GAME_SERVER       Build game server (core server)
-    BUILD_LOGIN_SERVER      Build login server (auth server)
     BUILD_EXTRACTORS        Build map/dbc/vmap/mmap extractor
     BUILD_SCRIPTDEV         Build scriptdev. (Disable it to speedup build in dev mode by not including scripts)
     BUILD_PLAYERBOT         Build Playerbot mod
@@ -49,9 +47,6 @@ message(STATUS
     cmake -DCMAKE_INSTALL_PREFIX=../opt/cmangos -DBUILD_EXTRACTORS=ON ..
 
     Build only server without scripts and extractors and in debug mode
-    cmake -DCMAKE_INSTALL_PREFIX=../opt/cmangos -DDEBUG=ON -DBUILD_ALL_SCRIPTS=OFF ..
-
-    Build only login server
-    cmake -DCMAKE_INSTALL_PREFIX=../opt/cmangos -DBUILD_GAME_SERVER=OFF .."
+    cmake -DCMAKE_INSTALL_PREFIX=../opt/cmangos -DDEBUG=ON -DBUILD_ALL_SCRIPTS=OFF .."
 )
 message("")

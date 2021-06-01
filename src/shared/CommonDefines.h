@@ -21,7 +21,7 @@
 
 enum LoginType
 {
-    LOGIN_TYPE_REALMD = 0,
+    LOGIN_TYPE_AUTHSERVER = 0,
     LOGIN_TYPE_MANGOSD = 1,
     LOGIN_TYPE_MAX,
 };

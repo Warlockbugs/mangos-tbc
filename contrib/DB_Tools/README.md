@@ -6,7 +6,7 @@ The core team will provide sql-files that will not change any content in any dat
 We will use these subdirectories:
 * WorldDB -- To output content we consider bad filled in the world-database (default: mangos)
 * CharDB -- To output content we consider bad filled in the characters-database (default: characters)
-* RealmDB -- To output content we consider bad filled in the realmd-database (default: realmd)
+* AuthServerDB -- To output content we consider bad filled in the authserver-database (default: cmangos_authserver)
 
 You can add additional Folders as you wish to store own sql-files for your own purposes.
 These folders are also processable with the provided scripts.

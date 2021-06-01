@@ -77,8 +77,8 @@ function create_db_config
             char* | Char*)
                 DATABASE="characters"
                 ;;
-            realm* | Realm*)
-                DATABASE="realmd"
+            authserver* | AuthServer*)
+                DATABASE="cmangos_authserver"
                 ;;
             script* | Script*)
                 DATABASE="scriptdev2"

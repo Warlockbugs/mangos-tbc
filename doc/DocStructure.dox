@@ -11,9 +11,6 @@
  * - <A HREF="./modules.html">In this source doumentation</A>, starting at the module hierarchy
  */
 
-/*! \defgroup realmd Realm Daemon
- */
-
 /*! \defgroup mangos Mangos Deamon
  */
 

@@ -315,7 +315,7 @@ bool WorldSocket::HandleAuthSession(WorldPacket& recvPacket)
         return false;
     }
 
-    // Get the account information from the realmd database
+    // Get the account information from the authserver database
     std::string safe_account = account; // Duplicate, else will screw the SHA hash verification below
     LoginDatabase.escape_string(safe_account);
     // No SQL injection, username escaped.
@@ -367,7 +367,7 @@ bool WorldSocket::HandleAuthSession(WorldPacket& recvPacket)
     OPENSSL_free((void*) sStr);
     OPENSSL_free((void*) vStr);
 
-    ///- Re-check ip locking (same check as in realmd).
+    ///- Re-check ip locking (same check as in authserver).
     if (fields[4].GetUInt8() == 1)  // if ip is locked
     {
         if (strcmp(fields[3].GetString(), GetRemoteAddress().c_str()))
@@ -404,7 +404,7 @@ bool WorldSocket::HandleAuthSession(WorldPacket& recvPacket)
 
     delete result;
 
-    // Re-check account ban (same check as in realmd)
+    // Re-check account ban (same check as in authserver)
     QueryResult* banresult =
         LoginDatabase.PQuery("SELECT 1 FROM account_banned WHERE account_id = %u AND active = 1 AND (expires_at > UNIX_TIMESTAMP() OR expires_at = banned_at)"
                              "UNION "

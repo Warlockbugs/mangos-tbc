@@ -39,9 +39,6 @@
 #ifndef _MANGOSDCONFVERSION
 # define _MANGOSDCONFVERSION 2020060701
 #endif
-#ifndef _REALMDCONFVERSION
-# define _REALMDCONFVERSION 2021031501
-#endif
 
 #if MANGOS_ENDIAN == MANGOS_BIGENDIAN
 # define _ENDIAN_STRING "big-endian"
@@ -71,7 +68,6 @@
 #  define _ENDIAN_PLATFORM "Win32 (" _ENDIAN_STRING ")"
 # endif
 # define _MANGOSD_CONFIG  SYSCONFDIR"mangosd.conf"
-# define _REALMD_CONFIG   SYSCONFDIR"realmd.conf"
 # define _AUCTIONHOUSEBOT_CONFIG   SYSCONFDIR"ahbot.conf"
 #else
 # if defined  (__FreeBSD__)
@@ -90,7 +86,6 @@
 #  define _ENDIAN_PLATFORM "Unix_" ARCHITECTURE " (" _ENDIAN_STRING ")"
 # endif
 # define _MANGOSD_CONFIG  SYSCONFDIR"mangosd.conf"
-# define _REALMD_CONFIG  SYSCONFDIR"realmd.conf"
 # define _AUCTIONHOUSEBOT_CONFIG   SYSCONFDIR"ahbot.conf"
 #endif
 
@@ -98,5 +93,5 @@
 
 #define DEFAULT_PLAYER_LIMIT 100
 #define DEFAULT_WORLDSERVER_PORT 8085                       //8129
-#define DEFAULT_REALMSERVER_PORT 3724
+#define DEFAULT_AUTHSERVER_PORT 3724
 #endif

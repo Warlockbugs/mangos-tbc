@@ -9,7 +9,7 @@ ConfVersion=2021021901
 # CONNECTIONS AND DIRECTORIES
 #
 #    RealmID
-#        RealmID must match the realmlist inside the realmd database
+#        RealmID must match the realmlist inside the authserver database
 #
 #    DataDir
 #        Data directory setting.
@@ -53,7 +53,7 @@ ConfVersion=2021021901
 #
 #    BindIP
 #        Bind World Server to specific IP address
-#        This option is useful for running multiple worldd/realmd instances
+#        This option is useful for running multiple mangosd/authserver instances
 #        on different IP addresses using default ports.
 #        DO NOT CHANGE THIS UNLESS YOU _REALLY_ KNOW WHAT YOU'RE DOING
 #
@@ -65,7 +65,7 @@ ConfVersion=2021021901
 RealmID = 1
 DataDir = "."
 LogsDir = ""
-LoginDatabaseInfo     = "127.0.0.1;3306;mangos;mangos;tbcrealmd"
+LoginDatabaseInfo     = "127.0.0.1;3306;mangos;mangos;cmangos_authserver"
 WorldDatabaseInfo     = "127.0.0.1;3306;mangos;mangos;tbcmangos"
 CharacterDatabaseInfo = "127.0.0.1;3306;mangos;mangos;tbccharacters"
 LoginDatabaseConnections = 1
